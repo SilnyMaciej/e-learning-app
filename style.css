@@ -1,0 +1,72 @@
+
+/* =========================
+   TŁO APLIKACJI
+   ========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  /* gradient = kolorowe tło (WIDAĆ różnicę!) */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   GŁÓWNA KARTA QUIZU
+   ========================= */
+.quiz-container {
+  width: 420px;
+}
+
+/* karta quizu */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  /* mocny cień = “unosząca się karta” */
+}
+
+/* =========================
+   PYTANIE
+   ========================= */
+h2 {
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+/* =========================
+   ODPOWIEDZI
+   ========================= */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #0984e3;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover = efekt “kliknięcia UI” */
+.answer-btn:hover {
+  background: #0652dd;
+  transform: scale(1.03);
+}
+
+/* =========================
+   WYNIK
+   ========================= */
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
