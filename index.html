@@ -1,17 +1,31 @@
-<hr>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-aplikacja E-learningowa</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<h2>Zadanie 3: Drag & Drop – ułóż kod funkcji Kotlin</h2>
-<p>Przeciągnij elementy do szarego pola w odpowiedniej kolejności.</p>
+    <h2>Zadanie 3: Drag & Drop – ułóż kod funkcji Kotlin</h2>
+    <p>Przeciągnij elementy do szarego pola w odpowiedniej kolejności.</p>
 
-<div class="drop-zone" id="dropZone">
-  </div>
+    <div class="drop-zone" id="dropZone">
+      Upuść tutaj elementy
+    </div>
 
-<div class="drag-container" id="dragContainer">
-  <div class="drag-item" draggable="true" id="item1">}</div>
-  <div class="drag-item" draggable="true" id="item2">hello()</div>
-  <div class="drag-item" draggable="true" id="item3">fun</div>
-  <div class="drag-item" draggable="true" id="item4">{</div>
-</div>
+    <div class="drag-container" id="dragContainer">
+      <div class="drag-item" draggable="true" id="item1">}</div>
+      <div class="drag-item" draggable="true" id="item2">hello()</div>
+      <div class="drag-item" draggable="true" id="item3">fun</div>
+      <div class="drag-item" draggable="true" id="item4">{</div>
+    </div>
 
-<button id="checkDragBtn" style="margin-top: 15px; padding: 10px 15px; cursor: pointer;">Sprawdź kolejność</button>
-<p id="dragFeedback" style="font-weight: bold; margin-top: 10px;"></p>
+    <button id="checkDragBtn" style="margin-top: 15px; padding: 10px 15px; cursor: pointer;">Sprawdź kolejność</button>
+    <p id="dragFeedback" style="font-weight: bold; margin-top: 10px;"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
