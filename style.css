@@ -1,6 +1,3 @@
-/* =========================
-   TŁO APLIKACJI
-   ========================= */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(135deg, #74b9ff, #a29bfe);
@@ -11,9 +8,6 @@ body {
   align-items: center;
 }
 
-/* =========================
-   GŁÓWNA KARTA QUIZU
-   ========================= */
 .quiz-container {
   width: 100%;
   max-width: 450px;
@@ -24,7 +18,6 @@ body {
 h1 {
   text-align: center;
   color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 20px;
 }
 
@@ -40,27 +33,21 @@ h1 {
   color: #b2bec3;
   font-weight: bold;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
 h2 {
   margin-top: 0;
   margin-bottom: 25px;
   color: #2d3436;
-  font-size: 22px;
-  line-height: 1.4;
 }
 
-/* =========================
-   ODPOWIEDZI I STATUSY
-   ========================= */
 .answers {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.answer-btn {
+.answer-btn, .reset-btn {
   padding: 14px 20px;
   border: 2px solid #e1e8ed;
   border-radius: 12px;
@@ -69,17 +56,14 @@ h2 {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  text-align: left;
   transition: all 0.2s ease;
 }
 
-.answer-btn:hover:not([disabled]) {
+.answer-btn, .reset-btn:hover:not([disabled]) {
   background: #f1f2f6;
   border-color: #0984e3;
-  transform: translateY(-2px);
 }
 
-/* Style dynamiczne dodawane przez JavaScript */
 .answer-btn.correct {
   background: #2ecc71 !important;
   color: white !important;
@@ -92,15 +76,11 @@ h2 {
   border-color: #c0392b !important;
 }
 
-/* =========================
-   ELEMENTY INTERFEJSU
-   ========================= */
 .feedback-msg {
   margin-top: 20px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  min-height: 24px;
 }
 
 .next-btn {
@@ -114,16 +94,10 @@ h2 {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
-}
-
-.next-btn:hover {
-  background: #5b4cc4;
 }
 
 #result-text {
   font-size: 20px;
   text-align: center;
-  color: #2d3436;
   margin-bottom: 25px;
 }
