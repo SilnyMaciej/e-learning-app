@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin - 10 Przydatnych Funkcji</title>
+  <link rel="stylesheet" href="education.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Biblioteka Funkcji Kotlin</h1>
+    
+    <div class="main-layout">
+      
+      <div class="functions-menu">
+        <div class="func-card" onclick="showFeature('uppercase')">.uppercase()</div>
+        <div class="func-card" onclick="showFeature('lowercase')">.lowercase()</div>
+        <div class="func-card" onclick="showFeature('reversed')">.reversed()</div>
+        <div class="func-card" onclick="showFeature('length')">.length</div>
+        <div class="func-card" onclick="showFeature('isNullOrEmpty')">.isNullOrEmpty()</div>
+        <div class="func-card" onclick="showFeature('contains')">.contains()</div>
+        <div class="func-card" onclick="showFeature('replace')">.replace()</div>
+        <div class="func-card" onclick="showFeature('substring')">.substring()</div>
+        <div class="func-card" onclick="showFeature('random')">.random()</div>
+        <div class="func-card" onclick="showFeature('toIntOrNull')">.toIntOrNull()</div>
+      </div>
+
+      <div class="display-panel">
+        <div id="default-message">
+          <p>💡 Kliknij dowolną funkcję z listy po lewej stronie, aby zobaczyć jak działa i do czego służy w praktyce!</p>
+        </div>
+        <div id="content-box" style="display: none;">
+          <div class="badge">Zadanie 1: Edukacja</div>
+          <h2 id="func-title">Nazwa Funkcji</h2>
+          <p id="func-desc">Opis działania...</p>
+          
+          <div class="code-box">
+            <span class="code-comment">// Przykład użycia w kodzie:</span>
+            <pre id="func-code">val tekst = "Kotlin"</pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="education.js"></script>
+</body>
+</html>
