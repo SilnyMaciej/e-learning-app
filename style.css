@@ -23,6 +23,10 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  /* Dodane, aby kontener nie znikał, gdy jest pusty */
+  min-height: 50px;
+  padding: 10px;
+  border: 2px dashed transparent;
 }
 
 .drag-item {
