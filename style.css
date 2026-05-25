@@ -1,12 +1,11 @@
-
 /* =========================
    TŁO APLIKACJI
    ========================= */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(135deg, #74b9ff, #a29bfe);
-  /* gradient = kolorowe tło (WIDAĆ różnicę!) */
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,57 +15,115 @@ body {
    GŁÓWNA KARTA QUIZU
    ========================= */
 .quiz-container {
-  width: 420px;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* karta quizu */
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
 .card {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  /* mocny cień = “unosząca się karta” */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* =========================
-   PYTANIE
-   ========================= */
+.quiz-progress {
+  font-size: 14px;
+  color: #b2bec3;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 h2 {
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 25px;
   color: #2d3436;
+  font-size: 22px;
+  line-height: 1.4;
 }
 
 /* =========================
-   ODPOWIEDZI
+   ODPOWIEDZI I STATUSY
    ========================= */
 .answers {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .answer-btn {
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #0984e3;
-  color: white;
+  padding: 14px 20px;
+  border: 2px solid #e1e8ed;
+  border-radius: 12px;
+  background: white;
+  color: #2d3436;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  text-align: left;
+  transition: all 0.2s ease;
 }
 
-/* hover = efekt “kliknięcia UI” */
-.answer-btn:hover {
-  background: #0652dd;
-  transform: scale(1.03);
+.answer-btn:hover:not([disabled]) {
+  background: #f1f2f6;
+  border-color: #0984e3;
+  transform: translateY(-2px);
+}
+
+/* Style dynamiczne dodawane przez JavaScript */
+.answer-btn.correct {
+  background: #2ecc71 !important;
+  color: white !important;
+  border-color: #27ae60 !important;
+}
+
+.answer-btn.wrong {
+  background: #e74c3c !important;
+  color: white !important;
+  border-color: #c0392b !important;
 }
 
 /* =========================
-   WYNIK
+   ELEMENTY INTERFEJSU
    ========================= */
-#result {
+.feedback-msg {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  text-align: center;
+  min-height: 24px;
+}
+
+.next-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #6c5ce7;
   color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.next-btn:hover {
+  background: #5b4cc4;
+}
+
+#result-text {
+  font-size: 20px;
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 25px;
 }
