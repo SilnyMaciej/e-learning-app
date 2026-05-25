@@ -2,48 +2,22 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kotlin Masterclass - Fiszki Teoretyczne</title>
-    <link rel="stylesheet" href="fiszki.css">
+    <title>Kotlin Masterclass - Start</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Kotlin Masterclass</h1>
-        </header>
-
-        <section class="section-column">
-            <div class="card-header-badge">Moduł Teoretyczny</div>
-            <h2>Fiszki Programistyczne</h2>
-            <p class="section-description">Kliknij na kartę, aby odwrócić ją płynnym ruchem 3D i poznać zaawansowane mechanizmy języka Kotlin.</p>
-            
-            <div class="flashcard-wrapper">
-                <div class="flashcard" id="flashcard" onclick="flipCard()">
-                    <div class="flashcard-inner">
-                        
-                        <div class="flashcard-front">
-                            <span class="card-category" id="card-category">Ładowanie...</span>
-                            <h3 id="card-title">Tytuł fiszki</h3>
-                            <div class="click-hint">Kliknij, aby odwrócić ↺</div>
-                        </div>
-                        
-                        <div class="flashcard-back">
-                            <h3>Wyjaśnienie:</h3>
-                            <p id="card-back-text">Tutaj pojawi się definicja...</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="controls-row">
-                <button class="btn btn-secondary" onclick="prevCard()">◀ Poprzednia</button>
-                <span class="counter" id="card-counter">1 / 10</span>
-                <button class="btn btn-secondary" onclick="nextCard()">Następna ▶</button>
-            </div>
-        </section>
+    <nav class="menu">
+        <a href="index.html">Start</a>
+        <a href="education.html">Teoria</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="drag_drop.html">Drag&Drop</a>
+        <a href="kod.html">Kod</a>
+        <a href="fiszki.html">Fiszki</a>
+        <a href="summary.html">Podsumowanie</a>
+    </nav>
+    <div class="container">
+        <h1>Witaj w Kotlin Masterclass</h1>
+        <p>Wybierz moduł z menu powyżej, aby rozpocząć naukę i zdobywać punkty.</p>
     </div>
-
-    <script src="fiszki.js"></script>
 </body>
 </html>
