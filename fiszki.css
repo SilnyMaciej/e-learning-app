@@ -1,0 +1,223 @@
+/* =========================
+   GŁÓWNY STYL I TŁO (Klon screena)
+   ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    min-height: 100vh;
+    color: #2d3436;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 550px; /* Szerokość dla jednej kolumny teorii */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app-header {
+    text-align: center;
+    color: white;
+}
+
+.app-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 5px;
+}
+
+/* =========================
+   GŁÓWNA KARTA (Zrzut ekranu Reworked)
+   ========================= */
+.section-column {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Niebieska pigułka "Teoria" */
+.card-header-badge {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    background: #6c5ce7;
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #2d3436;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    font-size: 14px;
+    color: #636e72;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   FUNDAMENTALNE STYLOWANIE 3D (Naprawa błędu)
+   ========================= */
+.flashcard-wrapper {
+    /* Ustawienie głębi dla efektu 3D (Musi być na rodzicu!) */
+    perspective: 1000px;
+    width: 100%;
+    height: 250px; /* Stała wysokość, aby nie skakało przy zmianie */
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Kontener, który fizycznie się obraca */
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* Płynna animacja trwająca 0.6 sekundy */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Wymagane, aby dzieci były w przestrzeni 3D */
+    transform-style: preserve-3d;
+}
+
+/* Stan odwrócony (klasa dodawana przez JS) */
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+/* Wspólny styl dla obu stron fiszki */
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Ukryj plecy, gdy przód jest widoczny */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Przód fiszki (Wyglaś jak ze screena) */
+.flashcard-front {
+    background: #fdfbf7;
+    border: 2px solid #a29bfe;
+}
+
+/* Pigułka kategorii na fiszce */
+.card-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6c5ce7;
+    background: #e8f4fd;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.flashcard-front h3 {
+    font-size: 20px;
+    color: #2d3436;
+    line-height: 1.4;
+}
+
+.click-hint {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #b2bec3;
+}
+
+/* Tył fiszki (Fioletowy) */
+.flashcard-back {
+    background: #6c5ce7;
+    color: white;
+    /* Obrócony domyślnie, aby po obrocie inner był widoczny */
+    transform: rotateY(180deg);
+}
+
+.flashcard-back h3 {
+    font-size: 14px;
+    color: #ffeaa7;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.flashcard-back p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   PRZYCISKI I KONTROLERY
+   ========================= */
+.controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-secondary {
+    background: #f1f2f6;
+    color: #2d3436;
+}
+
+.btn-secondary:hover {
+    background: #dfe6e9;
+}
+
+.counter {
+    font-size: 14px;
+    font-weight: 700;
+    color: #636e72;
+}
